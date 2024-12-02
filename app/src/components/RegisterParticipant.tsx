@@ -19,7 +19,7 @@ export const RegisterParticipant = () => {
         email: "",
         password: "",
         curp: "",
-        rol: "participant"
+        rol: "participan"
 
     });
 
@@ -35,7 +35,7 @@ export const RegisterParticipant = () => {
             Swal.fire("Guardando datos");
             Swal.showLoading();
             if (data) {
-                data["rol"] = "participant";
+                data["rol"] = "participan";
             }
 
             await axios.post("http://localhost:4000/user/register", data)
@@ -53,15 +53,15 @@ export const RegisterParticipant = () => {
                 <Card.Body>
                     <Form>
                         <Form.Group>
-                            <Form.Label>Nombre:</Form.Label>
+                            <Form.Label>name:</Form.Label>
                             <Form.Control name="name" onChange={onChange} />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Correo:</Form.Label>
+                            <Form.Label>email:</Form.Label>
                             <Form.Control name="email" onChange={onChange} />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Contraseña:</Form.Label>
+                            <Form.Label>password:</Form.Label>
                             <Form.Control type="password" name="password" onChange={onChange} />
                         </Form.Group>
                         <Form.Group>
