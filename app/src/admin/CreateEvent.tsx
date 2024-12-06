@@ -3,24 +3,15 @@ import React, { useState } from 'react'
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
 import { Trash } from 'react-bootstrap-icons';
 import Swal from 'sweetalert2';
-
-interface IMetric {
-    description: string;
-    max_point: number;
-}
+import { IEvent } from '../Types';
 
 
 
-interface IEvent {
-    name: string;
-    max_round: number;
-    metrics: IMetric[];
-}
 
 export const CreateEvent = () => {
     const emptyMetric = {
         description: "",
-        max_point: 0
+        max_points: 0
     }
     const [event, setEvent] = useState<IEvent>({
         name: "",
